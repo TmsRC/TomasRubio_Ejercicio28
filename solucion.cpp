@@ -42,7 +42,7 @@ void resolver() {
     outfile << endl;
     
     
-    for(int j=1 ;j<200; j++) {
+    for(int j=0 ;j<200; j++) {
         
         outfile <<  malla[0][1] << " ";
         for(int i=1; i<199; i++) {
@@ -50,10 +50,9 @@ void resolver() {
             malla[i][1] = malla[i][0] + eta*(malla[i+1][0] + malla[i-1][0] - 2* malla[i][0]);
             outfile <<  malla[i][1] << " ";
         }
-        malla[199][1] = 300; 
-        outfile <<  malla[200][1] << " ";
+        outfile <<  300 << " ";
         outfile << endl;
-        for(int i=0; i<200; i++) {
+        for(int i=1; i<199; i++) {
             
             malla[i][0] = malla[i][1];
         }
